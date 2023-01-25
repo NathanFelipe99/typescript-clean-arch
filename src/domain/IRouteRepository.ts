@@ -1,5 +1,5 @@
-import { Route } from "./entities/route.entity";
+import { RouteProps } from "../shared/utils/types/route.types";
 
 export interface IRouteRepository {
-    insert(props: Route): Promise<void>;
+    insert(props: RouteProps): Promise<void>;
 }

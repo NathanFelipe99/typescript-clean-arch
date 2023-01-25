@@ -1,4 +1,4 @@
-import { PositionProps, RouteProps } from "../../shared/utils/types/route.types";
+import { PositionProps, RouteProps } from "../shared/utils/types/route.types";
 
 export class Route {
     public props: Required<RouteProps>;

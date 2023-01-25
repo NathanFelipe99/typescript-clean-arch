@@ -1,5 +1,5 @@
-import { Route } from "../../../domain/entities/route.entity";
-import { IRouteRepository } from "../../../domain/IRouteRepository";
+import { Route } from "../domain/Route";
+import { IRouteRepository } from "./../domain/IRouteRepository";
 
 export class RouteRepositoryInMemory implements IRouteRepository {
     routes: Route[] = [];
