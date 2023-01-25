@@ -1,5 +1,5 @@
 import { Route } from "./route.entity";
-import { PositionProps, RouteProps } from "../shared/utils/types/route.types";
+import { PositionProps, RouteProps } from "../../shared/utils/types/route.types";
 
 describe("Route tests", () => {
     it("Testing class constructor", () => {
