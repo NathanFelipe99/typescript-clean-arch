@@ -1,6 +1,5 @@
-import { Route } from "../domain/Route";
-import { IRouteRepository } from "./../domain/IRouteRepository";
-
+import { Route } from "../../domain/Route";
+import { IRouteRepository } from "../../domain/IRouteRepository";
 export class RouteRepositoryInMemory implements IRouteRepository {
     routes: Route[] = [];
     
@@ -8,4 +7,7 @@ export class RouteRepositoryInMemory implements IRouteRepository {
         this.routes.push(props);
     }
     
+    async findAll(): Promise<Route[]> {
+        return this.routes;
+    }
 }

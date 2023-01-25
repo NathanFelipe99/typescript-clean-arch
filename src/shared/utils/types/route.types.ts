@@ -11,6 +11,7 @@ export type RouteProps = {
 }
 
 export type CreateRouteOuptut = {
+    id?: string;
     title: string,
     startPosition: PositionProps,
     endPosition: PositionProps,

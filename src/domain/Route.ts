@@ -1,9 +1,12 @@
+import crypto from "crypto";
 import { PositionProps, RouteProps } from "../shared/utils/types/route.types";
 
 export class Route {
+    public readonly id: string;
     public props: Required<RouteProps>;
     
-    constructor(props: RouteProps) {
+    constructor(props: RouteProps, id?: string) {
+        this.id = id || crypto.randomUUID(),
         this.props = {
             ...props,
             points: props.points || []
@@ -56,6 +59,6 @@ export class Route {
     }
 
     toJSON() {
-        return this.props;
+        return { id: this.id, ...this.props };
     }
 }

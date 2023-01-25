@@ -1,5 +1,6 @@
-import { RouteProps } from "../shared/utils/types/route.types";
+import { Route } from "./Route";
 
 export interface IRouteRepository {
-    insert(props: RouteProps): Promise<void>;
+    insert(props: Route): Promise<void>;
+    findAll(): Promise<Route[]>;
 }

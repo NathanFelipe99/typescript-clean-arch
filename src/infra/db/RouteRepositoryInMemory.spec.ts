@@ -1,5 +1,5 @@
-import { Route } from "../domain/Route";
-import { RouteProps } from "../shared/utils/types/route.types";
+import { Route } from "../../domain/Route";
+import { RouteProps } from "../../shared/utils/types/route.types";
 import { RouteRepositoryInMemory } from "./RouteRepositoryInMemory";
 
 describe("RouteInMemoryRepository tests", () => {

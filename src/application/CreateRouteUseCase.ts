@@ -9,8 +9,7 @@ export class CreateRouteUseCase {
 
     async execute(data: RouteProps): Promise<CreateRouteOuptut> {
         const route = new Route(data);
-        await this._routeRepository.insert(data);
+        await this._routeRepository.insert(route);
         return route.toJSON();
     }
-    /** 1h50min */
 }

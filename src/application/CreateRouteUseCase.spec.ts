@@ -1,4 +1,4 @@
-import { RouteRepositoryInMemory } from "../infra/RouteRepositoryInMemory";
+import { RouteRepositoryInMemory } from "../infra/db/RouteRepositoryInMemory";
 import { CreateRouteUseCase } from "./CreateRouteUseCase";
 
 describe("CreateRouteUseCase tests", () => {
@@ -11,14 +11,14 @@ describe("CreateRouteUseCase tests", () => {
             startPosition: { lat: 30, lng: 20 },
             endPosition: { lat: 60, lng: 85 }
         });
-
+        
+        expect(routeRepository.routes).toHaveLength(1);
         expect(newRoute).toStrictEqual({
+            id: routeRepository.routes[0].id,
             title: "UseCase test",
             startPosition: { lat: 30, lng: 20 },
             endPosition: { lat: 60, lng: 85 },
             points: []
         });
-
-        expect(routeRepository.routes).toHaveLength(1);
     });
 });
